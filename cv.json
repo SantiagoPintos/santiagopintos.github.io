@@ -1,0 +1,242 @@
+{
+  "basics": {
+    "name": "Santiago Pintos",
+    "label": "Full Stack Developer",
+    "email": "santiagonicolaspintos@gmail.com",
+    "url": "https://santiagopintos.github.io",
+    "summary": "Desarrollador Web Full Stack. Estudiante en Universidad ORT. Apasionado por la tecnología, el desarrollo de software y el aprendizaje continuo.",
+    "location": {
+      "address": "",
+      "postalCode": "",
+      "city": "Canelones",
+      "countryCode": "UY",
+      "region": "Uruguay"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "santiagopintos",
+        "url": "https://linkedin.com/in/santiagopintos"
+      },
+      {
+        "network": "GitHub",
+        "username": "santiagopintos",
+        "url": "https://github.com/santiagppintos"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Universidad de Trabajo del Uruguay",
+      "position": "Asistente de Laboratorio de Informática",
+      "url": "https://utu.edu.uy",
+      "startDate": "2020-06-01",
+      "endDate": null,
+      "summary": "Desarrollo de sistemas de gestión de alumnos y docentes, mantenimiento de la infraestructura de red y servidores, soporte técnico a docentes y alumnos.",
+      "highlights": [
+        "Started the company"
+      ]
+    }
+  ],
+  "education": [{
+    "institution": "Universidad ORT Uruguay",
+    "url": "https://ort.edu.uy",
+    "area": "Analista en Tecnologías de la Información",
+    "studyType": "Bachelor",
+    "startDate": "2023-01-01",
+    "endDate": null,
+    "score": "4.0",
+    "courses": []
+  },
+  {
+    "institution": "Platzi",
+    "url": "https://platzi.com",
+    "area": "Full Stack Developer con JavaScript",
+    "studyType": "Bachelor",
+    "startDate": "2022-01-01",
+    "endDate": "2022-11-01",
+    "score": "4.0",
+    "courses": [
+      "Curso de Git",
+      "Curso de NPM",
+      "Curso de Frontend Developer",
+      "Curso Práctico de Frontend Developer",
+      "Curso de JavaScript",
+      "Curso de ECMAScript 6+",
+      "Curso de Asincronismo con JavaScript",
+      "Curso de Closures y Scope en JavaScript",
+      "Curso de Profesional de JavaScript",
+      "Curso de API REST con JavaScript",
+      "Curso de TypeScript",
+      "Curso de React.js",
+      "Curso de WebPack"
+    ]
+  },
+  {
+    "institution": "Platzi",
+    "url": "https://platzi.com",
+    "area": "Escuela de Desarrollo Web",
+    "studyType": "Bachelor",
+    "startDate": "2021-12-01",
+    "endDate": "2021-12-30",
+    "score": "4.0",
+    "courses": []
+  }],
+  "awards": [{
+    "title": "Award",
+    "date": "2014-11-01",
+    "awarder": "Company",
+    "summary": "There is no spoon."
+  }],
+  "certificates": [{
+    "name": "Certificate",
+    "date": "2021-11-07",
+    "issuer": "Company",
+    "url": "https://certificate.com"
+  }],
+  "publications": [{
+    "name": "Publication",
+    "publisher": "Company",
+    "releaseDate": "2014-10-01",
+    "url": "https://publication.com",
+    "summary": "Description…"
+  }],
+  "skills": [
+    {
+      "name": "HTML",
+      "level": "Master",
+      "keywords": [
+        "Desarrollo Web", "Frontend"
+      ]
+    },
+    {
+      "name": "CSS",
+      "level": "Master",
+      "keywords": [
+        "Desarrollo Web", "Frontend", "Diseño Responsive"
+      ]
+    },
+    {
+      "name": "JavaScript",
+      "level": "Master",
+      "keywords": [
+        "Desarrollo Web", "Frontend", "Backend", "Fullstack"
+      ]
+    },
+    {
+      "name": "Bootstrap",
+      "level": "Avanzado",
+      "keywords": [
+        "Desarrollo Web", "Frontend", "CSS Framework", "Diseño Responsive"
+      ]
+    },
+    {
+      "name": "TypeScript",
+      "level": "Avanzado",
+      "keywords": [
+        "Desarrollo Web", "Frontend", "Backend", "JavaScript Superset"
+      ]
+    },
+    {
+      "name": "Node",
+      "level": "Avanzado",
+      "keywords": [
+        "Desarrollo Web", "Backend", "JavaScript", "Servidor"
+      ]
+    },
+    {
+      "name": "SQL Server",
+      "level": "Avanzado",
+      "keywords": [
+        "Bases de Datos", "SQL", "Almacenamiento de Datos", "Backend"
+      ]
+    },
+    {
+      "name": "Git",
+      "level": "Avanzado",
+      "keywords": [
+        "Control de Versiones", "Colaboración", "Código Fuente"
+      ]
+    },
+    {
+      "name": "GitHub",
+      "level": "Avanzado",
+      "keywords": [
+        "Control de Versiones", "Colaboración", "Código Fuente", "Git"
+      ]
+    },
+    {
+      "name": "Express",
+      "level": "Avanzado",
+      "keywords": [
+        "Desarrollo Web", "Frontend", "React Framework", "SSR", "Static Generation"
+      ]
+    },
+    {
+      "name": "React",
+      "level": "Avanzado",
+      "keywords": [
+        "Desarrollo Web", "Frontend", "JavaScript Library", "UI"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Spanish",
+      "fluency": "Native speaker"
+    },
+    {
+      "language": "English",
+      "fluency": "Advanced"
+    }
+  ],
+  "interests": [{
+    "name": "Wildlife",
+    "keywords": [
+      "Ferrets",
+      "Unicorns"
+    ]
+  }],
+  "references": [{
+    "name": "Jane Doe",
+    "reference": "Reference…"
+  }],
+  "projects": [
+    {
+      "name": "Social-backend",
+      "isActive": true,
+      "description": "Backend para un red social estilo X",
+      "highlights": [
+        "Red social",
+        "TypeScript",
+        "ExpressJS",
+        "sqlite",
+        "En desarrollo"
+      ],
+      "url": "https://github.com/SantiagoPintos/social-backend"
+    },
+    {
+      "name": "Calcount",
+      "isActive": false,
+      "description": "Aplicación para dispotivos Android que permite contar calorías consumidas durante el día",
+      "highlights": [
+        "JavaScript",
+        "Android",
+        "Capacitor",
+        "Ionic"
+      ],
+      "url": "https://github.com/SantiagoPintos/TDDM-ORT/"
+    },
+    {
+      "name": "Registro de uso",
+      "isActive": true,
+      "description": "Aplicación para control de uso de equipos informáticos de instituciones educativas",
+      "highlights": [
+        "Electron",
+        "TypeScript",
+        "sqlite"
+      ],
+      "url": "https://github.com/SantiagoPintos/registro-uso-esi"
+    }
+  ]
+}
