@@ -213,7 +213,8 @@
         "sqlite",
         "En desarrollo"
       ],
-      "url": "https://github.com/SantiagoPintos/social-backend"
+      "url": "https://github.com/SantiagoPintos/social-backend",
+      "github" : "https://github.com/SantiagoPintos/social-backend"
     },
     {
       "name": "Calcount",
@@ -225,7 +226,8 @@
         "Capacitor",
         "Ionic"
       ],
-      "url": "https://github.com/SantiagoPintos/TDDM-ORT/"
+      "url": "https://github.com/SantiagoPintos/TDDM-ORT/",
+      "github" : "https://github.com/SantiagoPintos/TDDM-ORT/"
     },
     {
       "name": "Registro de uso",
@@ -236,7 +238,8 @@
         "TypeScript",
         "sqlite"
       ],
-      "url": "https://github.com/SantiagoPintos/registro-uso-esi"
+      "url": "https://github.com/SantiagoPintos/registro-uso-esi",
+      "github" : "https://github.com/SantiagoPintos/registro-uso-esi"
     }
   ]
 }
