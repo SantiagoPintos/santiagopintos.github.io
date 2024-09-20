@@ -6,7 +6,7 @@ export const RESUME_DATA = {
   location: "Montevideo, Uruguay",
   locationLink: "https://www.google.com/maps/place/Montevideo,+Uruguay",
   about:
-    "Full Stack Developer",
+    "Developer dedicated to creating seamless, high-quality digital experiences.",
   summary:
     "Full Stack web developer with a focus on user experience and innovation, currently pursuing a degree in Computer Science at ORT University.",
   personalWebsiteUrl: "https://santiagopintos.github.io/",
@@ -40,14 +40,14 @@ export const RESUME_DATA = {
     },
     {
       school: "Platzi",
-      degree: "Web development school",
+      degree: "Web Development School",
       start: "2021",
       end: "2022",
     },
   ],
   work: [
     {
-      company: "Universidad de trabajo del Uruguay",
+      company: "Universidad de Trabajo del Uruguay",
       link: "https://utu.edu.uy",
       badges: [""],
       title: "Lab assistant",
