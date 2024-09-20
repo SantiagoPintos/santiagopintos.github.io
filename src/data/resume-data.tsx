@@ -1,287 +1,189 @@
-import {
-  AmbitLogo,
-  BarepapersLogo,
-  BimLogo,
-  CDGOLogo,
-  ClevertechLogo,
-  ConsultlyLogo,
-  EvercastLogo,
-  Howdy,
-  JarockiMeLogo,
-  JojoMobileLogo,
-  Minimal,
-  MobileVikingsLogo,
-  MonitoLogo,
-  NSNLogo,
-  ParabolLogo,
-  TastyCloudLogo,
-  YearProgressLogo,
-} from "@/images/logos";
-import { GitHubIcon, LinkedInIcon, XIcon } from "@/components/icons";
+import { GitHubIcon, LinkedInIcon } from "@/components/icons";
 
 export const RESUME_DATA = {
-  name: "Bartosz Jarocki",
-  initials: "BJ",
-  location: "Wrocław, Poland, CET",
-  locationLink: "https://www.google.com/maps/place/Wrocław",
+  name: "Santiago Pintos",
+  initials: "SP",
+  location: "Montevideo, Uruguay",
+  locationLink: "https://www.google.com/maps/place/Montevideo,+Uruguay",
   about:
-    "Detail-oriented Full Stack Engineer dedicated to building high-quality products.",
+    "Full Stack Developer",
   summary:
-    "As a Full Stack Engineer, I specialize in taking products from concept to launch. I excel in leading teams and creating environments where individuals perform at their best. Currently, I work mostly with TypeScript, React, Node.js, and GraphQL. I have over 8 years of experience working remotely with companies worldwide.",
-  avatarUrl: "https://avatars.githubusercontent.com/u/1017620?v=4",
-  personalWebsiteUrl: "https://jarocki.me",
+    "Full Stack web developer with a focus on user experience and innovation, currently pursuing a degree in Computer Science at ORT University.",
+  personalWebsiteUrl: "https://santiagopintos.github.io/",
   contact: {
-    email: "bartosz.jarocki@hey.com",
-    tel: "+48530213401",
+    email: "spintos@outlook.es",
     social: [
       {
         name: "GitHub",
-        url: "https://github.com/BartoszJarocki",
+        url: "https://github.com/SantiagoPintos",
         icon: GitHubIcon,
       },
       {
         name: "LinkedIn",
-        url: "https://www.linkedin.com/in/bjarocki/",
+        url: "https://www.linkedin.com/in/santiago-pintos/",
         icon: LinkedInIcon,
-      },
-      {
-        name: "X",
-        url: "https://x.com/BartoszJarocki",
-        icon: XIcon,
       },
     ],
   },
   education: [
     {
-      school: "Wrocław University of Technology",
-      degree: "Bachelor's Degree in Control systems engineering and Robotics",
-      start: "2007",
-      end: "2010",
+      school: "Universidad ORT Uruguay",
+      degree: "Computer Science",
+      start: "2023",
+      end: null,
+    },
+    {
+      school: "Platzi",
+      degree: "Full Stack Developer with JavaScript",
+      start: "2022",
+      end: "2022",
+    },
+    {
+      school: "Platzi",
+      degree: "Web development school",
+      start: "2021",
+      end: "2022",
     },
   ],
   work: [
     {
-      company: "Film.io",
-      link: "https://film.io",
-      badges: ["Remote"],
-      title: "Software Architect",
-      logo: ConsultlyLogo,
+      company: "Universidad de trabajo del Uruguay",
+      link: "https://utu.edu.uy",
+      badges: [""],
+      title: "Lab assistant",
       start: "2024",
       end: null,
       description:
-        "Leading the development of the Film.io platform. Technologies: React, TypeScript, Node.js",
-    },
-    {
-      company: "Parabol",
-      link: "https://parabol.co",
-      badges: ["Remote"],
-      title: "Senior Full Stack Developer",
-      logo: ParabolLogo,
-      start: "2021",
-      end: "2024",
-      description:
-        "Implemented new features, led a squad, improved code delivery process, and initiated migration from Emotion to Tailwind CSS. Technologies: React, TypeScript, GraphQL",
-    },
-    {
-      company: "Clevertech",
-      link: "https://clevertech.biz",
-      badges: ["Remote"],
-      title: "Lead Android Developer → Full Stack Developer",
-      logo: ClevertechLogo,
-      start: "2015",
-      end: "2021",
-      description:
-        "Created Android mobile apps and led teams for companies like Vision Media, DKMS, and AAA. Built a live streaming application for Evercast from scratch. Technologies: Android, Kotlin, React, TypeScript, GraphQL",
-    },
-    {
-      company: "Jojo Mobile",
-      link: "https://bsgroup.eu/",
-      badges: [],
-      title: "Android Developer → Lead Android Developer",
-      logo: JojoMobileLogo,
-      start: "2012",
-      end: "2015",
-      description:
-        "Led the Android team and developed apps for major Polish companies like LOT, Polskie Radio, Agora, and PolskaPress",
-    },
-    {
-      company: "Nokia Siemens Networks",
-      link: "https://www.nokia.com",
-      badges: [],
-      title: "C/C++ Developer",
-      logo: NSNLogo,
-      start: "2010",
-      end: "2012",
-      description: "Developed and tested software for LTE base stations",
+        "Development of management systems, maintenance of network infrastructure and servers, technical support to teachers and students.",
     },
   ],
   skills: [
     "JavaScript",
     "TypeScript",
     "React/Next.js/Remix",
+    "React Native",
+    "CSS/SCSS",
     "Node.js",
-    "GraphQL",
-    "Relay",
-    "WebRTC",
+    "Express",
+    "MongoDB",
+    "SQL Server",
+    "Python",
+    ".Net",
+    "Azure",
+    "AWS"
   ],
   projects: [
     {
-      title: "Parabol",
+      title: "Inasistencias",
       techStack: [
-        "Full Stack Developer",
         "TypeScript",
         "React",
         "Node.js",
-        "GraphQL",
+        "Electron",
+        "Sqlite",
       ],
       description:
-        "The Agile meeting co-pilot that delivers better meetings with less effort",
-      logo: ParabolLogo,
+        "Desktop application to manage absences of teachers in a school",
       link: {
         label: "github.com",
-        href: "https://parabol.co/",
+        href: "https://github.com/santiagopintos/Inasistencias",
       },
     },
     {
-      title: "Evercast",
+      title: "BabyTracker",
       techStack: [
-        "Lead Frontend Developer",
-        "TypeScript",
+        "Javascript",
         "React",
-        "Node.js",
-        "GraphQL",
+        "Material UI",
       ],
       description:
-        "Creative collaboration platform that combines video conferencing and HD media streaming",
-      logo: EvercastLogo,
+        "Mobile application manage baby's daily activities",
       link: {
-        label: "evercast.us",
-        href: "https://www.evercast.us/",
+        label: "BabyTracker",
+        href: "https://github.com/santiagopintos/BabyTracker",
       },
     },
     {
-      title: "Consultly",
+      title: "Email",
+      techStack: [
+        ".Net",
+        "C#",
+        "Azure",
+      ],
+      description:
+        "Desktop application to manage emails",
+      link: {
+        label: "Email",
+        href: "https://github.com/santiagopintos/Email",
+      },
+    },
+    {
+      title: "Social Backend",
       techStack: [
         "Side Project",
         "TypeScript",
-        "Next.js",
-        "Vite",
-        "GraphQL",
-        "WebRTC",
+        "Express",
+        "Node.js",
+        "Sqlite",
       ],
-      description: "A platform to build and grow your online business",
-      logo: ConsultlyLogo,
+      description: "Backend for a social network application",  
       link: {
-        label: "consultly.com",
-        href: "https://consultly.com/",
+        label: "Social Backend",
+        href: "https://github.com/santiagopintos/social-backend",
       },
     },
     {
-      title: "Monito",
-      techStack: ["Side Project", "TypeScript", "Next.js", "Browser Extension"],
+      title: "Calcount",
+      techStack: [
+        "JavaScript", 
+        "Android", 
+        "Capacitor",
+        "Ionic"
+      ],
       description:
-        "Browser extension that records everything happening in a web application",
-      logo: MonitoLogo,
+        "Android application to manage daily calorie intake",
       link: {
-        label: "monito.dev",
-        href: "https://monito.dev/",
+        label: "Calcount",
+        href: "https://github.com/santiagopintos/TDDM-ORT/",
       },
     },
     {
-      title: "Jarocki.me",
-      techStack: ["Side Project", "Next.js", "MDX"],
+      title: "Registro de uso",
+      techStack: [
+        "Electron", 
+        "TypeScript", 
+        "Sqlite"
+      ],
       description:
-        "Personal website and blog. Built with Next.js and Notion API",
-      logo: JarockiMeLogo,
+        "Desktop app to manage the use of computers in a school",
       link: {
-        label: "github.com",
-        href: "https://jarocki.me/",
+        label: "Registro de uso",
+        href: "https://github.com/SantiagoPintos/registro-uso-esi",
       },
-    },
-    {
-      title: "Minimal",
-      techStack: ["Side Project", "Next.js", "Puppeteer"],
-      description:
-        "Minimalist calendars, habit trackers, and planners generator",
-      logo: Minimal,
-      link: {
-        label: "useminimal.com",
-        href: "https://useminimal.com/",
-      },
-    },
-    {
-      title: "Barepapers",
-      techStack: ["Side Project", "Next.js", "Puppeteer"],
-      description:
-        "Generates beautiful wallpapers using random shapes and gradients",
-      logo: BarepapersLogo,
-      link: {
-        label: "barepapers.com",
-        href: "https://barepapers.com/",
-      },
-    },
-    {
-      title: "Year progress",
-      techStack: ["Side Project", "TypeScript", "Next.js"],
-      description: "Tracks current year progress and displays a countdown",
-      logo: YearProgressLogo,
-      link: {
-        label: "getyearprogress.com",
-        href: "https://getyearprogress.com/",
-      },
-    },
-    {
-      title: "Mobile Vikings",
-      techStack: ["Lead Android Developer", "Android", "Kotlin"],
-      description:
-        "Android application for leading virtual mobile operator in Poland",
-      logo: MobileVikingsLogo,
-      link: {
-        label: "mobilevikings.pl",
-        href: "https://mobilevikings.pl/",
-      },
-    },
-    {
-      title: "Howdy",
-      techStack: ["Lead Android Developer", "Android", "Kotlin"],
-      description: "Howdy is a place for joining communities you care about",
-      logo: Howdy,
-      link: {
-        label: "play.google.com",
-        href: "https://howdy.co/",
-      },
-    },
-    {
-      title: "Tastycloud",
-      techStack: ["Lead Android Developer", "Android", "Kotlin"],
-      description:
-        "Android application for managing and displaying restaurant menus in kiosk mode",
-      logo: TastyCloudLogo,
-      link: {
-        label: "tastycloud.fr",
-        href: "https://www.tastycloud.fr/",
-      },
-    },
-    {
-      title: "Ambit",
-      techStack: ["Lead Android Developer", "Android", "Kotlin"],
-      description:
-        "Android application that helps with sharing your contact details",
-      logo: AmbitLogo,
-    },
-    {
-      title: "Bim",
-      techStack: ["Lead Android Developer", "Android", "Kotlin"],
-      description:
-        "Android application that helps with booking a table in a restaurants",
-      logo: BimLogo,
-    },
-    {
-      title: "Canal Digital GO",
-      techStack: ["Lead Android Developer", "Android", "Kotlin"],
-      description:
-        "Video streaming mobile application for Canal Digital subscribers",
-      logo: CDGOLogo,
     },
   ],
+  certificates: [
+    {
+      name: "Checkout Pro",
+      date: "2024",
+      issuer: "Mercado Libre",
+      url: "https://www.mercadopago.com.uy/developers/panel/developer-program/certification/cert_46a59bd63f1111efbb7b8e3c267079e3"
+    },
+    {
+      name: "Fundational C# with Microsoft",
+      date: "2024",
+      issuer: "Microsoft - freeCodeCamp",
+      url: "https://www.freecodecamp.org/certification/fcc5feb4082-0a79-4944-a977-1b0608b421ef/foundational-c-sharp-with-microsoft"
+    }
+  ],
+  awards: [
+      {
+        title: "Champion",
+        date: "2018",
+        awarder: "Sumo.uy - Facultad de Ingeniería, Universidad de la República",
+        summary: "Robotics competition hosted by Facultad de Ingeniería, UDELAR. Qualifying for the RoboCup world robotics championship held in Sydney the following year.",
+        issuer: "Sumo.uy",
+        url: "https://2019.robocup.org/"
+      },
+  ]
 } as const;

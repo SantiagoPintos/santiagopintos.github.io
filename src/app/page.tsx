@@ -1,4 +1,3 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Card, CardHeader, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { CommandMenu } from "@/components/command-menu";
@@ -47,18 +46,6 @@ export default function Page() {
                   </a>
                 </Button>
               ) : null}
-              {RESUME_DATA.contact.tel ? (
-                <Button
-                  className="size-8"
-                  variant="outline"
-                  size="icon"
-                  asChild
-                >
-                  <a href={`tel:${RESUME_DATA.contact.tel}`}>
-                    <PhoneIcon className="size-4" />
-                  </a>
-                </Button>
-              ) : null}
               {RESUME_DATA.contact.social.map((social) => (
                 <Button
                   key={social.name}
@@ -79,18 +66,9 @@ export default function Page() {
                   <span className="underline">{RESUME_DATA.contact.email}</span>
                 </a>
               ) : null}
-              {RESUME_DATA.contact.tel ? (
-                <a href={`tel:${RESUME_DATA.contact.tel}`}>
-                  <span className="underline">{RESUME_DATA.contact.tel}</span>
-                </a>
-              ) : null}
             </div>
           </div>
 
-          <Avatar className="size-28">
-            <AvatarImage alt={RESUME_DATA.name} src={RESUME_DATA.avatarUrl} />
-            <AvatarFallback>{RESUME_DATA.initials}</AvatarFallback>
-          </Avatar>
         </div>
         <Section>
           <h2 className="text-xl font-bold">About</h2>
@@ -160,6 +138,7 @@ export default function Page() {
             );
           })}
         </Section>
+        
         <Section>
           <h2 className="text-xl font-bold">Skills</h2>
           <div className="flex flex-wrap gap-1">
@@ -188,6 +167,58 @@ export default function Page() {
               );
             })}
           </div>
+        </Section>
+
+        <Section>
+          <h2 className="text-xl font-bold">Certificates</h2>
+            {RESUME_DATA.certificates.map((certificate) => {
+              return (
+                <Card key={certificate.name}>
+                  <CardHeader>
+                    <div className="flex items-center justify-between gap-x-2 text-base">
+                      <h3 className="font-semibold leading-none">
+                        <a href={certificate.url} target="_blank" rel="noopener noreferrer">
+                          {certificate.name}
+                        </a>
+                      </h3>
+                      <div className="text-sm tabular-nums text-gray-500">
+                        {certificate.date}
+                      </div>
+                    </div>
+                  </CardHeader>
+                  <CardContent className="mt-2 print:text-[12px]">
+                    {certificate.issuer}
+                  </CardContent>
+                </Card>
+              );
+              }
+            )}
+        </Section>
+
+        <Section>
+          <h2 className="text-xl font-bold">Awards</h2>
+            {RESUME_DATA.awards.map((award) => {
+              return (
+                  <Card key={award.date}>
+                    <CardHeader>
+                      <div className="flex items-center justify-between gap-x-2 text-base">
+                        <h3 className="font-semibold leading-none">
+                          <a href={award.url} target="_blank" rel="noopener noreferrer">
+                            {`${award.title} - ${award.issuer}`}
+                          </a>
+                        </h3>
+                        <div className="text-sm tabular-nums text-gray-500">
+                          {award.date}
+                        </div>
+                      </div>
+                    </CardHeader>
+                    <CardContent className="mt-2 print:text-[12px]">
+                      {award.summary}
+                    </CardContent>
+                  </Card>
+                );
+              })
+            }
         </Section>
       </section>
 
