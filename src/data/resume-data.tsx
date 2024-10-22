@@ -74,6 +74,21 @@ export const RESUME_DATA = {
   ],
   projects: [
     {
+      title: "PrivateIA",
+      techStack: [
+        "TypeScript",
+        "Next.js",
+        "Tailwind",
+        "Transformers"
+      ],
+      description:
+        "Web platform with AI models running entirely on the browser (client side)",
+      link: {
+        label: "github.com",
+        href: "http://168.75.89.35/",
+      },
+    },
+    {
       title: "Inasistencias",
       techStack: [
         "TypeScript",
