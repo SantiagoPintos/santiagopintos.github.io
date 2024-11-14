@@ -51,7 +51,7 @@ export const RESUME_DATA = {
       link: "https://utu.edu.uy",
       badges: [""],
       title: "Lab assistant",
-      start: "2024",
+      start: "2020",
       end: null,
       description:
         "Development of management systems, maintenance of network infrastructure and servers, technical support to teachers and students.",
