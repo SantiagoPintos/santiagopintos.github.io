@@ -7,11 +7,17 @@ export const RESUME_DATA = {
   locationLink: "https://www.google.com/maps/place/Montevideo,+Uruguay",
   about:
     "Developer dedicated to creating seamless, high-quality digital experiences.",
-  summary:
-    "Full Stack web developer with a focus on user experience and innovation, currently pursuing a degree in Computer Science at ORT University.",
+  summary: (
+    <>
+      Full Stack Software Engineer proficient in .NET, React, and Node.js, specializing in developing innovative web applications with integrated AI capabilities.
+      <br />
+      Experienced in cross-functional team environments.
+    </>
+  ),
   personalWebsiteUrl: "https://santiagopintos.github.io/",
   contact: {
     email: "spintos@outlook.es",
+    tel : null,
     social: [
       {
         name: "GitHub",
@@ -52,43 +58,57 @@ export const RESUME_DATA = {
     {
       company: "Ultimate Kronos Group (UKG)",
       link: "https://www.ukg.com/",
-      badges: [""],
+      badges: ["Kotlin", "Angular", "AWS", "AI"],
       title: "Software Engineer Intern",
       start: "2025",
       end: null,
-      description:  
-        "Development of web applications for managing human resources, payroll, and workforce scheduling.",
+      description: (
+        <>
+          Development of web applications for analyzing user reviews using AI models.
+          <ul className="list-inside list-disc">
+            <li>Implementation of AI-based sentiment analysis models to process user feedback and extract key sentiments.</li>
+            <li>Testing, deployment, and maintenance of web applications.</li>
+          </ul>
+        </>
+      )
     },
     {
       company: "Universidad de Trabajo del Uruguay",
       link: "https://utu.edu.uy",
-      badges: [""],
+      badges: ["Linux", "Windows"],
       title: "Lab assistant",
       start: "2020",
       end: "2025",
-      description:
-        "Development of management systems, maintenance of network infrastructure and servers, technical support to teachers and students.",
+      description: (
+        <>
+          Development of management systems, maintenance of network infrastructure and servers, technical support to teachers and students.
+          <ul className="list-inside list-disc">
+            <li>Maintenance of network infrastructure and servers.</li>
+            <li>Development of management systems for the school.</li>
+            <li>Technical support to teachers and students.</li>
+          </ul>
+        </>
+      ),
     },
   ],
   skills: [
     "JavaScript/TypeScript",
-    "React/Next.js/Remix",
-    "React Native",
-    "CSS/SCSS",
+    "React/Next.js",
+    "Angular",
     "Node.js",
-    "Express",
+    "Tailwind CSS",
     "MongoDB",
     "SQL Server",
+    "Java",
     "Python",
     "Kotlin",
-    "Angular",
     ".Net",
     "Azure",
-    "AWS"
+    "AWS",
   ],
   projects: [
     {
-      title: "PrivateIA",
+      title: "AiTools",
       techStack: [
         "TypeScript",
         "Next.js",
@@ -99,7 +119,7 @@ export const RESUME_DATA = {
         "Web platform with AI models running entirely on the browser (client side)",
       link: {
         label: "github.com",
-        href: "http://168.75.89.35/",
+        href: "https://santiagopintos.github.io/aitools/",
       },
     },
     {
@@ -174,20 +194,6 @@ export const RESUME_DATA = {
       link: {
         label: "Calcount",
         href: "https://github.com/santiagopintos/TDDM-ORT/",
-      },
-    },
-    {
-      title: "Registro de uso",
-      techStack: [
-        "Electron", 
-        "TypeScript", 
-        "Sqlite"
-      ],
-      description:
-        "Desktop app to manage the use of computers in a school",
-      link: {
-        label: "Registro de uso",
-        href: "https://github.com/SantiagoPintos/registro-uso-esi",
       },
     },
   ],
