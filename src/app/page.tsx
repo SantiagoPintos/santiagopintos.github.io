@@ -89,7 +89,7 @@ export default function Page() {
                       </a>
 
                     </h3>
-                    <div className="text-sm tabular-nums text-gray-500">
+                    <div className="text-sm tabular-nums text-gray-500 min-w-fit">
                       {work.start} - {work.end ?? "Present"}
                     </div>
                   </div>
