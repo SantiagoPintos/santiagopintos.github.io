@@ -87,7 +87,6 @@ export default function Page() {
                       <a className="hover:underline" href={work.link}>
                         {work.company}
                       </a>
-
                     </h3>
                     <div className="text-sm tabular-nums text-gray-500 min-w-fit">
                       {work.start} - {work.end ?? "Present"}
@@ -113,7 +112,9 @@ export default function Page() {
                 <CardHeader>
                   <div className="flex items-center justify-between gap-x-2 text-base">
                     <h3 className="font-semibold leading-none">
-                      {education.school}
+                      <a className="hover:underline" href={education.link}>
+                        {education.school}
+                      </a>
                     </h3>
                     <div className="text-sm tabular-nums text-gray-500">
                       {education.start} - {education.end ?? "Present"}
