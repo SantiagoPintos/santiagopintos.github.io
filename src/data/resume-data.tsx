@@ -29,18 +29,21 @@ export const RESUME_DATA = {
     {
       school: "Universidad ORT Uruguay",
       degree: "Computer Science",
+      link: "https://www.ort.edu.uy/",
       start: "2023",
       end: null,
     },
     {
       school: "Platzi",
       degree: "Full Stack Developer with JavaScript",
+      link: "https://platzi.com/",
       start: "2022",
       end: "2022",
     },
     {
       school: "Platzi",
       degree: "Web Development School",
+      link: "https://platzi.com/",
       start: "2021",
       end: "2022",
     },
