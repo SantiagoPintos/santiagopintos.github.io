@@ -55,9 +55,19 @@ export const RESUME_DATA = {
       badges: [""],
       title: "Lab assistant",
       start: "2020",
-      end: null,
+      end: "2025",
       description:
         "Development of management systems, maintenance of network infrastructure and servers, technical support to teachers and students.",
+    },
+    {
+      company: "Ultimate Kronos Group (UKG)",
+      link: "https://www.ukg.com/",
+      badges: [""],
+      title: "Software Engineer Intern",
+      start: "2025",
+      end: null,
+      description:  
+        "Development of web applications for managing human resources, payroll, and workforce scheduling.",
     },
   ],
   skills: [
