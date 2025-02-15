@@ -71,8 +71,7 @@ export const RESUME_DATA = {
     },
   ],
   skills: [
-    "JavaScript",
-    "TypeScript",
+    "JavaScript/TypeScript",
     "React/Next.js/Remix",
     "React Native",
     "CSS/SCSS",
@@ -81,6 +80,8 @@ export const RESUME_DATA = {
     "MongoDB",
     "SQL Server",
     "Python",
+    "Kotlin",
+    "Angular",
     ".Net",
     "Azure",
     "AWS"
