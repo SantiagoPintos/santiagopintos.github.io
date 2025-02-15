@@ -50,16 +50,6 @@ export const RESUME_DATA = {
   ],
   work: [
     {
-      company: "Universidad de Trabajo del Uruguay",
-      link: "https://utu.edu.uy",
-      badges: [""],
-      title: "Lab assistant",
-      start: "2020",
-      end: "2025",
-      description:
-        "Development of management systems, maintenance of network infrastructure and servers, technical support to teachers and students.",
-    },
-    {
       company: "Ultimate Kronos Group (UKG)",
       link: "https://www.ukg.com/",
       badges: [""],
@@ -68,6 +58,16 @@ export const RESUME_DATA = {
       end: null,
       description:  
         "Development of web applications for managing human resources, payroll, and workforce scheduling.",
+    },
+    {
+      company: "Universidad de Trabajo del Uruguay",
+      link: "https://utu.edu.uy",
+      badges: [""],
+      title: "Lab assistant",
+      start: "2020",
+      end: "2025",
+      description:
+        "Development of management systems, maintenance of network infrastructure and servers, technical support to teachers and students.",
     },
   ],
   skills: [
