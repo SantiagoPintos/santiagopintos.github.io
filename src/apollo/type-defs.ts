@@ -125,3 +125,24 @@ export class Me {
   @Field(() => [Project])
   projects: Project[];
 }
+
+@ObjectType()
+export class Awards {
+  @Field(() => String)
+  title: string;
+
+  @Field(() => String)
+  date: string;
+
+  @Field(() => String)
+  awarder: string;
+
+  @Field(() => String)
+  summary: string;
+
+  @Field(() => String)
+  issuer: string;
+
+  @Field(() => String)
+  url: string;
+}
