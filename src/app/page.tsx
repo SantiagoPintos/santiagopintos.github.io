@@ -6,7 +6,7 @@ import { Section } from "@/components/ui/section";
 import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { RESUME_DATA } from "@/data/resume-data";
-import { ProjectCard } from "@/components/project-card";
+import { Certificates } from "./components/Certificates";
 import { WorkExperience } from "./components/WorkExperience";
 import { Projects } from "./components/Projects";
 
@@ -150,31 +150,7 @@ export default function Page() {
 
         <Projects projects={RESUME_DATA.projects} />
 
-        <Section>
-          <h2 className="text-xl font-bold">Certificates</h2>
-            {RESUME_DATA.certificates.map((certificate) => {
-              return (
-                <Card key={certificate.name}>
-                  <CardHeader>
-                    <div className="flex items-center justify-between gap-x-2 text-base">
-                      <h3 className="font-semibold leading-none">
-                        <a href={certificate.url} target="_blank" rel="noopener noreferrer">
-                          {certificate.name}
-                        </a>
-                      </h3>
-                      <div className="text-sm tabular-nums text-gray-500">
-                        {certificate.date}
-                      </div>
-                    </div>
-                  </CardHeader>
-                  <CardContent className="mt-2 print:text-[12px]">
-                    {certificate.issuer}
-                  </CardContent>
-                </Card>
-              );
-              }
-            )}
-        </Section>
+        <Certificates certificates={RESUME_DATA.certificates} />
 
         <Section>
           <h2 className="text-xl font-bold">Awards</h2>
