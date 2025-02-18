@@ -7,6 +7,7 @@ import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { RESUME_DATA } from "@/data/resume-data";
 import { Certificates } from "./components/Certificates";
+import { Awards } from "./components/Awards";
 import { WorkExperience } from "./components/WorkExperience";
 import { Projects } from "./components/Projects";
 
@@ -152,31 +153,7 @@ export default function Page() {
 
         <Certificates certificates={RESUME_DATA.certificates} />
 
-        <Section>
-          <h2 className="text-xl font-bold">Awards</h2>
-            {RESUME_DATA.awards.map((award) => {
-              return (
-                  <Card key={award.date}>
-                    <CardHeader>
-                      <div className="flex items-center justify-between gap-x-2 text-base">
-                        <h3 className="font-semibold leading-none">
-                          <a href={award.url} target="_blank" rel="noopener noreferrer">
-                            {`${award.title} - ${award.issuer}`}
-                          </a>
-                        </h3>
-                        <div className="text-sm tabular-nums text-gray-500">
-                          {award.date}
-                        </div>
-                      </div>
-                    </CardHeader>
-                    <CardContent className="mt-2 print:text-[12px]">
-                      {award.summary}
-                    </CardContent>
-                  </Card>
-                );
-              })
-            }
-        </Section>
+        <Awards awards={RESUME_DATA.awards} />
       </section>
 
       <CommandMenu
