@@ -5,6 +5,7 @@ export const RESUME_DATA = {
   initials: "SP",
   location: "Montevideo, Uruguay",
   locationLink: "https://www.google.com/maps/place/Montevideo,+Uruguay",
+  avatarUrl: "",
   about:
     "Developer dedicated to creating seamless, high-quality digital experiences.",
   summary: (
