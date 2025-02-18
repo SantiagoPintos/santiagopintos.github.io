@@ -146,3 +146,18 @@ export class Awards {
   @Field(() => String)
   url: string;
 }
+
+@ObjectType()
+export class Certificates {
+  @Field(() => String)
+  name: string;
+
+  @Field(() => String)
+  date: string;
+
+  @Field(() => String)
+  issuer: string;
+
+  @Field(() => String)
+  url: string;
+}
