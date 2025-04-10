@@ -15,7 +15,7 @@ export const RESUME_DATA = {
       Experienced in cross-functional team environments.
     </>
   ),
-  personalWebsiteUrl: "https://santiagopintos.github.io/",
+  personalWebsiteUrl: "https://santiagopintos.github.io/cv",
   contact: {
     email: "spintos@outlook.es",
     tel : null,
