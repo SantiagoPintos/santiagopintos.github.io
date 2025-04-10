@@ -64,6 +64,16 @@
     --input: 215 27.9% 16.9%;
     --ring: 216 12.2% 83.9%;
   }
+
+  /* Ensure smooth transitions between light and dark modes */
+  html {
+    color-scheme: light;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  }
+
+  html.dark {
+    color-scheme: dark;
+  }
 }
 
 @layer base {

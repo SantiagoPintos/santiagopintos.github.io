@@ -29,11 +29,27 @@ export function ThemeProvider({
   storageKey = "theme",
   ...props
 }: ThemeProviderProps) {
-  const [theme, setTheme] = useState<Theme>(
-    () => (typeof window !== "undefined" ? (localStorage.getItem(storageKey) as Theme) || defaultTheme : defaultTheme)
-  )
+  // Use a mounting state to avoid hydration mismatch
+  const [mounted, setMounted] = useState(false)
+  const [theme, setTheme] = useState<Theme>(defaultTheme)
+  
+  // Initialize theme on client side
+  useEffect(() => {
+    setMounted(true)
+    const savedTheme = localStorage.getItem(storageKey) as Theme | null
+    if (savedTheme) {
+      setTheme(savedTheme)
+    } else if (defaultTheme === "system") {
+      const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"
+      setTheme(systemTheme)
+    } else {
+      setTheme(defaultTheme)
+    }
+  }, [defaultTheme, storageKey])
 
   useEffect(() => {
+    if (!mounted) return
+
     const root = window.document.documentElement
 
     root.classList.remove("light", "dark")
@@ -45,7 +61,26 @@ export function ThemeProvider({
     }
 
     root.classList.add(theme)
-  }, [theme])
+  }, [theme, mounted])
+
+  // Listen for system preference changes
+  useEffect(() => {
+    if (!mounted) return
+
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)")
+    
+    // Update theme based on system changes
+    const handleChange = () => {
+      if (theme === "system") {
+        const newTheme = mediaQuery.matches ? "dark" : "light"
+        document.documentElement.classList.remove("light", "dark")
+        document.documentElement.classList.add(newTheme)
+      }
+    }
+
+    mediaQuery.addEventListener("change", handleChange)
+    return () => mediaQuery.removeEventListener("change", handleChange)
+  }, [theme, mounted])
 
   const value = {
     theme,
@@ -55,6 +90,7 @@ export function ThemeProvider({
     },
   }
 
+  // Avoid hydration issues by only rendering children after mounting
   return (
     <ThemeProviderContext.Provider {...props} value={value}>
       {children}
