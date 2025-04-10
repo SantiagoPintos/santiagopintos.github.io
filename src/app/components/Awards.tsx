@@ -18,7 +18,7 @@ export function Awards({ awards }: AwardsProps) {
     <Section>
       <h2 className="text-xl font-bold">Awards</h2>
       {awards.map((award) => (
-        <Card key={award.date}>
+        <Card key={award.date} className="bg-background">
           <CardHeader>
             <div className="flex items-center justify-between gap-x-2 text-base">
               <h3 className="font-semibold leading-none">
