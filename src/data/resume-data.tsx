@@ -10,9 +10,7 @@ export const RESUME_DATA = {
     "Developer dedicated to creating seamless, high-quality digital experiences.",
   summary: (
     <>
-      Full Stack Software Engineer proficient in .NET, React, and Node.js, specializing in developing innovative web applications with integrated AI capabilities.
-      <br />
-      Experienced in cross-functional team environments.
+      Full Stack SWE proficient in .NET, Kotlin, and Node.js, specializing in developing innovative web applications with integrated AI capabilities.
     </>
   ),
   personalWebsiteUrl: "https://santiagopintos.github.io/",
@@ -44,13 +42,6 @@ export const RESUME_DATA = {
       school: "Platzi",
       degree: "Full Stack Developer with JavaScript",
       link: "https://platzi.com/",
-      start: "2022",
-      end: "2022",
-    },
-    {
-      school: "Platzi",
-      degree: "Web Development School",
-      link: "https://platzi.com/",
       start: "2021",
       end: "2022",
     },
@@ -59,16 +50,15 @@ export const RESUME_DATA = {
     {
       company: "Ultimate Kronos Group (UKG)",
       link: "https://www.ukg.com/",
-      badges: ["Kotlin", "Angular", "AWS", "AI"],
+      badges: ["Kotlin", "Angular", "AI"],
       title: "Software Engineer Intern",
       start: "2025",
       end: null,
       description: (
         <>
-          Development of web applications for analyzing user reviews using AI models.
+          Design, development and testing of applications for internal use.
           <ul className="list-inside list-disc">
-            <li>Implementation of AI-based sentiment analysis models to process user feedback and extract key sentiments.</li>
-            <li>Testing, deployment, and maintenance of web applications.</li>
+            <li>Development of high-performance web applications and services.</li>
           </ul>
         </>
       )
@@ -84,9 +74,9 @@ export const RESUME_DATA = {
         <>
           Development of management systems, maintenance of network infrastructure and servers, technical support to teachers and students.
           <ul className="list-inside list-disc">
-            <li>Maintenance of network infrastructure and servers.</li>
-            <li>Development of management systems for the school.</li>
-            <li>Technical support to teachers and students.</li>
+            <li>Maintained network infrastructure and servers.</li>
+            <li>Developed management systems for the school.</li>
+            <li>Providad technical support to teachers and students.</li>
           </ul>
         </>
       ),
@@ -94,18 +84,13 @@ export const RESUME_DATA = {
   ],
   skills: [
     "JavaScript/TypeScript",
-    "React/Next.js",
     "Angular",
+    "React/Next.js",
     "Node.js",
     "Tailwind CSS",
-    "MongoDB",
-    "SQL Server",
     "Java",
-    "Python",
     "Kotlin",
     ".Net",
-    "Azure",
-    "AWS",
   ],
   projects: [
     {
@@ -124,36 +109,6 @@ export const RESUME_DATA = {
       },
     },
     {
-      title: "Inasistencias",
-      techStack: [
-        "TypeScript",
-        "React",
-        "Node.js",
-        "Electron",
-        "Sqlite",
-      ],
-      description:
-        "Desktop application to manage absences of teachers in a school",
-      link: {
-        label: "github.com",
-        href: "https://github.com/santiagopintos/Inasistencias",
-      },
-    },
-    {
-      title: "BabyTracker",
-      techStack: [
-        "Javascript",
-        "React",
-        "Material UI",
-      ],
-      description:
-        "Mobile application manage baby's daily activities",
-      link: {
-        label: "BabyTracker",
-        href: "https://github.com/santiagopintos/BabyTracker",
-      },
-    },
-    {
       title: "Email",
       techStack: [
         ".Net",
@@ -165,36 +120,6 @@ export const RESUME_DATA = {
       link: {
         label: "Email",
         href: "https://github.com/santiagopintos/Email",
-      },
-    },
-    {
-      title: "Social Backend",
-      techStack: [
-        "Side Project",
-        "TypeScript",
-        "Express",
-        "Node.js",
-        "Sqlite",
-      ],
-      description: "Backend for a social network application",  
-      link: {
-        label: "Social Backend",
-        href: "https://github.com/santiagopintos/social-backend",
-      },
-    },
-    {
-      title: "Calcount",
-      techStack: [
-        "JavaScript", 
-        "Android", 
-        "Capacitor",
-        "Ionic"
-      ],
-      description:
-        "Android application to manage daily calorie intake",
-      link: {
-        label: "Calcount",
-        href: "https://github.com/santiagopintos/TDDM-ORT/",
       },
     },
   ],
