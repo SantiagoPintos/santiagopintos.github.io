@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-11 md:p-16">
-      <section className="mx-auto w-full max-w-2xl space-y-8 bg-white print:space-y-4">
+      <section className="mx-auto w-full max-w-2xl space-y-8 bg-background print:space-y-4 print:bg-white">
         <Header />
 
         <Summary summary={RESUME_DATA.summary} />
