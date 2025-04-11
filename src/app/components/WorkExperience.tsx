@@ -49,7 +49,7 @@ interface WorkPeriodProps {
 function WorkPeriod({ start, end }: WorkPeriodProps) {
   return (
     <div
-      className="text-sm tabular-nums text-gray-500"
+      className="text-sm tabular-nums text-gray-500 min-w-fit"
       aria-label={`Employment period: ${start} to ${end ?? "Present"}`}
     >
       {start} - {end ?? "Present"}
