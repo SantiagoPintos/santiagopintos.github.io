@@ -13,7 +13,7 @@ export const RESUME_DATA = {
       Full Stack SWE proficient in .NET, Kotlin, and Node.js, specializing in developing innovative web applications with integrated AI capabilities.
     </>
   ),
-  personalWebsiteUrl: "https://santiagopintos.github.io/",
+  personalWebsiteUrl: "https://santiagopintos.github.io/cv",
   contact: {
     email: "spintos@outlook.es",
     tel : null,
