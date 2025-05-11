@@ -77,7 +77,7 @@ export const RESUME_DATA = {
           <ul className="list-inside list-disc">
             <li>Maintained network infrastructure and servers.</li>
             <li>Developed management systems for the school.</li>
-            <li>Providad technical support to teachers and students.</li>
+            <li>Provided technical support to teachers and students.</li>
           </ul>
         </>
       ),
