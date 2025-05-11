@@ -48,18 +48,19 @@ export const RESUME_DATA = {
   ],
   work: [
     {
-      company: "Ultimate Kronos Group (UKG)",
+      company: "UKG",
       link: "https://www.ukg.com/",
-      badges: ["Kotlin", "Angular", "AI"],
+      badges: ["Kotlin", "Angular", "Python", "AI"],
       title: "Software Engineer Intern",
       start: "2025",
       end: null,
       description: (
         <>
-          Design, development and testing of applications for internal use.
+          Design, development and testing of applications and internal tools for the company.
           <ul className="list-inside list-disc">
-            <li>Development of high-performance web applications and services.</li>
-          </ul>
+            <li>Development of a project to improve the visibility of developers&apos; skills.</li>
+            <li>Development and integration of AI agents.</li>
+          </ul>     
         </>
       )
     },
@@ -87,7 +88,7 @@ export const RESUME_DATA = {
     "Angular",
     "React/Next.js",
     "Node.js",
-    "Tailwind CSS",
+    "Python",
     "Java",
     "Kotlin",
     ".Net",
