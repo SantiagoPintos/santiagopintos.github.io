@@ -1,10 +1,10 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardHeader, CardContent } from "@/components/ui/card";
 import { Section } from "@/components/ui/section";
-import { RESUME_DATA } from "@/data/resume-data";
 import { cn } from "@/lib/utils";
+import { CvData } from "@/types/cv";
 
-type WorkExperience = (typeof RESUME_DATA)["work"][number];
+type WorkExperience = CvData["work"][number];
 type WorkBadges = readonly string[];
 
 interface BadgeListProps {
@@ -124,15 +124,12 @@ function WorkExperienceItem({ work }: WorkExperienceItemProps) {
   );
 }
 
-interface WorkExperienceProps {
-  work: (typeof RESUME_DATA)["work"];
-}
 
 /**
  * Main work experience section component
  * Renders a list of work experiences in chronological order
  */
-export function WorkExperience({ work }: WorkExperienceProps) {
+export function WorkExperience({ work }: { work: CvData["work"] }) {
   return (
     <Section>
       <h2 className="text-xl font-bold" id="work-experience">

@@ -1,18 +1,12 @@
-import { RESUME_DATA } from "@/data/resume-data";
 import { Section } from "../../components/ui/section";
-
-interface AboutProps {
-  summary: typeof RESUME_DATA.summary;
-  className?: string;
-}
 
 /**
  * Summary section component
  * Displays a summary of professional experience and goals
  */
-export function Summary({ summary, className }: AboutProps) {
+export function Summary({ summary }: { summary: string }) {
   return (
-    <Section className={className}>
+    <Section>
       <h2 className="text-xl font-bold" id="about-section">
         About
       </h2>

@@ -1,11 +1,14 @@
 import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { RESUME_DATA } from "@/data/resume-data";
+import type { CvData } from "@/types/cv";
+import { useEffect, useState } from "react";
+import { fetchCvData } from "@/lib/getData";
+import { getIconComponent } from "@/lib/getIconComponent";
 
 interface LocationLinkProps {
-  location: typeof RESUME_DATA.location;
-  locationLink: typeof RESUME_DATA.locationLink;
+  location: CvData["location"];
+  locationLink: CvData["locationLink"];
 }
 
 function LocationLink({ location, locationLink }: LocationLinkProps) {
@@ -27,11 +30,17 @@ function LocationLink({ location, locationLink }: LocationLinkProps) {
 
 interface SocialButtonProps {
   href: string;
-  icon: React.ElementType;
+  icon: string;
   label: string;
 }
 
-function SocialButton({ href, icon: Icon, label }: SocialButtonProps) {
+function SocialButton({ href, icon: iconName, label }: SocialButtonProps) {
+  const IconComponent = getIconComponent(iconName);
+
+  if (!IconComponent) {
+    return null;
+  }
+
   return (
     <Button className="size-8" variant="outline" size="icon" asChild>
       <a
@@ -40,14 +49,14 @@ function SocialButton({ href, icon: Icon, label }: SocialButtonProps) {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <Icon className="size-4" aria-hidden="true" />
+        <IconComponent className="size-4" aria-hidden="true" />
       </a>
     </Button>
   );
 }
 
 interface ContactButtonsProps {
-  contact: typeof RESUME_DATA.contact;
+  contact: CvData["contact"];
   personalWebsiteUrl?: string;
 }
 
@@ -61,29 +70,22 @@ function ContactButtons({ contact, personalWebsiteUrl }: ContactButtonsProps) {
       {personalWebsiteUrl && (
         <SocialButton
           href={personalWebsiteUrl}
-          icon={GlobeIcon}
+          icon="globe"
           label="Personal website"
         />
       )}
       {contact.email && (
         <SocialButton
           href={`mailto:${contact.email}`}
-          icon={MailIcon}
+          icon="mail"
           label="Email"
-        />
-      )}
-      {contact.tel && (
-        <SocialButton
-          href={`tel:${contact.tel}`}
-          icon={PhoneIcon}
-          label="Phone"
         />
       )}
       {contact.social.map((social) => (
         <SocialButton
           key={social.name}
           href={social.url}
-          icon={social.icon}
+          icon={social.icon as string}
           label={social.name}
         />
       ))}
@@ -92,7 +94,7 @@ function ContactButtons({ contact, personalWebsiteUrl }: ContactButtonsProps) {
 }
 
 interface PrintContactProps {
-  contact: typeof RESUME_DATA.contact;
+  contact: CvData["contact"];
   personalWebsiteUrl?: string;
 }
 
@@ -124,14 +126,6 @@ function PrintContact({ contact, personalWebsiteUrl }: PrintContactProps) {
           <span aria-hidden="true">/</span>
         </>
       )}
-      {contact.tel && (
-        <a
-          className="underline hover:text-foreground/70"
-          href={`tel:${contact.tel}`}
-        >
-          {contact.tel}
-        </a>
-      )}
     </div>
   );
 }
@@ -140,41 +134,53 @@ function PrintContact({ contact, personalWebsiteUrl }: PrintContactProps) {
  * Header component displaying personal information and contact details
  */
 export function Header() {
+  const [cvData, setCvData] = useState(null as CvData | null);
+  
+    useEffect(() => {
+      fetchCvData().then(setCvData).catch(console.error);
+    }, []);
+    if (!cvData) {
+      return (
+        <div className="flex h-screen items-center justify-center">
+          <p className="text-lg font-semibold">Loading...</p>
+        </div>
+      );
+    }
   return (
     <header className="flex items-center justify-between">
       <div className="flex-1 space-y-1.5">
         <h1 className="text-2xl font-bold" id="resume-name">
-          {RESUME_DATA.name}
+          {cvData.name}
         </h1>
         <p
           className="max-w-md text-pretty font-mono text-sm text-foreground/80 print:text-[12px]"
           aria-labelledby="resume-name"
         >
-          {RESUME_DATA.about}
+          {cvData.about}
         </p>
 
         <LocationLink
-          location={RESUME_DATA.location}
-          locationLink={RESUME_DATA.locationLink}
+          location={cvData.location}
+          locationLink={cvData.locationLink}
         />
 
         <ContactButtons
-          contact={RESUME_DATA.contact}
-          personalWebsiteUrl={RESUME_DATA.personalWebsiteUrl}
+          contact={cvData.contact}
+          personalWebsiteUrl={cvData.personalWebsiteUrl}
         />
 
         <PrintContact
-          contact={RESUME_DATA.contact}
-          personalWebsiteUrl={RESUME_DATA.personalWebsiteUrl}
+          contact={cvData.contact}
+          personalWebsiteUrl={cvData.personalWebsiteUrl}
         />
       </div>
 
       <Avatar className="size-28" aria-hidden="true">
         <AvatarImage
-          alt={`${RESUME_DATA.name}'s profile picture`}
-          src={RESUME_DATA.avatarUrl}
+          alt={`${cvData.name}'s profile picture`}
+          src={cvData.avatarUrl}
         />
-        <AvatarFallback>{RESUME_DATA.initials}</AvatarFallback>
+        <AvatarFallback>{cvData.initials}</AvatarFallback>
       </Avatar>
     </header>
   );

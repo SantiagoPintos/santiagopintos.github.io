@@ -7,7 +7,7 @@ import {
   CardContent,
 } from "../../components/ui/card";
 import { Section } from "../../components/ui/section";
-import { RESUME_DATA } from "../../data/resume-data";
+import type { CvData } from "@/types/cv";
 
 type ProjectTags = readonly string[];
 
@@ -115,7 +115,7 @@ function ProjectCard({ title, description, tags, link }: ProjectCardProps) {
 }
 
 interface ProjectsProps {
-  projects: (typeof RESUME_DATA)["projects"];
+  projects: CvData["projects"];
 }
 
 /**

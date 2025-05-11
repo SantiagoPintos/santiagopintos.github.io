@@ -1,8 +1,8 @@
 import { Card, CardHeader, CardContent } from "@/components/ui/card";
 import { Section } from "@/components/ui/section";
-import { RESUME_DATA } from "@/data/resume-data";
+import type { CvData } from "@/types/cv";
 
-type Education = (typeof RESUME_DATA)["education"][number];
+type Education = CvData["education"][number];
 
 interface EducationPeriodProps {
   start: Education["start"];
