@@ -4,7 +4,8 @@ import { Section } from "@/components/ui/section";
 import { RESUME_DATA } from "@/data/resume-data";
 import { cn } from "@/lib/utils";
 
-type WorkExperience = (typeof RESUME_DATA)["work"][number];
+type CompanyExperience = (typeof RESUME_DATA)["work"][number];
+type Position = CompanyExperience["positions"][number];
 type WorkBadges = readonly string[];
 
 interface BadgeListProps {
@@ -39,8 +40,8 @@ function BadgeList({ className, badges }: BadgeListProps) {
 }
 
 interface WorkPeriodProps {
-  start: WorkExperience["start"];
-  end?: WorkExperience["end"];
+  start: Position["start"];
+  end?: Position["end"];
 }
 
 /**
@@ -58,8 +59,8 @@ function WorkPeriod({ start, end }: WorkPeriodProps) {
 }
 
 interface CompanyLinkProps {
-  company: WorkExperience["company"];
-  link: WorkExperience["link"];
+  company: CompanyExperience["company"];
+  link: CompanyExperience["link"];
 }
 
 /**
@@ -79,46 +80,60 @@ function CompanyLink({ company, link }: CompanyLinkProps) {
   );
 }
 
-interface WorkExperienceItemProps {
-  work: WorkExperience;
+interface PositionItemProps {
+  position: Position;
 }
 
 /**
  * Individual work experience card component
  * Handles responsive layout for badges (mobile/desktop)
  */
-function WorkExperienceItem({ work }: WorkExperienceItemProps) {
-  const { company, link, badges, title, start, end, description } = work;
+function PositionItem({ position }: PositionItemProps) {
+  const { badges, title, start, end, description } = position;
+  return (
+    <div>
+      <div className="flex items-center justify-between gap-x-2 text-base">
+        <h4 className="font-mono text-sm  font-semibold leading-none print:text-[12px] text-foreground">
+          {title}
+        </h4>
+        <WorkPeriod start={start} end={end} />
+      </div>
+      <div className="mt-2 text-xs text-foreground/80 print:mt-1 print:text-[10px] text-pretty">
+        {description}
+      </div>
+      <div className="mt-2">
+        <BadgeList className="-mx-2 flex-wrap gap-1 sm:hidden" badges={badges} />
+      </div>
+    </div>
+  );
+}
 
+interface CompanyCardProps {
+  company: CompanyExperience;
+}
+
+function CompanyCard({ company }: CompanyCardProps) {
+  const { company: companyName, link, positions } = company;
+  const aggregateBadges = Array.from(
+    new Set(positions.flatMap((p) => p.badges))
+  );
   return (
     <Card className="py-1 print:py-0">
       <CardHeader className="print:space-y-1">
         <div className="flex items-center justify-between gap-x-2 text-base">
-          <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none print:text-sm">
-            <CompanyLink company={company} link={link} />
+          <h3 className="inline-flex items-center pb-1 justify-center gap-x-1 font-semibold leading-none print:text-sm">
+            <CompanyLink company={companyName} link={link} />
             <BadgeList
               className="hidden gap-x-1 sm:inline-flex"
-              badges={badges}
+              badges={aggregateBadges}
             />
           </h3>
-          <WorkPeriod start={start} end={end} />
         </div>
-
-        <h4 className="font-mono text-sm font-semibold leading-none print:text-[12px]">
-          {title}
-        </h4>
       </CardHeader>
-
-      <CardContent>
-        <div className="mt-2 text-xs text-foreground/80 print:mt-1 print:text-[10px] text-pretty">
-          {description}
-        </div>
-        <div className="mt-2">
-          <BadgeList
-            className="-mx-2 flex-wrap gap-1 sm:hidden"
-            badges={badges}
-          />
-        </div>
+      <CardContent className="space-y-4 print:space-y-2">
+        {positions.map((p) => (
+          <PositionItem key={`${companyName}-${p.start}-${p.title}`} position={p} />
+        ))}
       </CardContent>
     </Card>
   );
@@ -139,9 +154,9 @@ export function WorkExperience({ work }: WorkExperienceProps) {
         Work Experience
       </h2>
       <div className="space-y-4 print:space-y-0" role="feed" aria-labelledby="work-experience">
-        {work.map((item) => (
-          <article key={`${item.company}-${item.start}`} role="article">
-            <WorkExperienceItem work={item} />
+        {work.map((company) => (
+          <article key={company.company} role="article">
+            <CompanyCard company={company} />
           </article>
         ))}
       </div>

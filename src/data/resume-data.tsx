@@ -50,37 +50,59 @@ export const RESUME_DATA = {
     {
       company: "UKG",
       link: "https://www.ukg.com/",
-      badges: ["Kotlin", "Angular", "Python", "AI"],
-      title: "Software Engineer Intern",
-      start: "2025",
-      end: null,
-      description: (
-        <>
-          Design, development and testing of applications and internal tools for the company.
-          <ul className="list-inside list-disc">
-            <li>Development of a project to improve the visibility of developers&apos; skills.</li>
-            <li>Development and integration of AI agents.</li>
-          </ul>     
-        </>
-      )
+      positions: [
+        {
+          badges: ["Python", "AI"],
+            title: "Associate Software Engineer",
+            start: "2025",
+            end: null,
+            description: (
+              <>
+              Member of the AI team at Great Place To Work
+                <ul className="list-inside list-disc">
+                  <li>Design and development of AI agents.</li>
+                  <li>Exploration of new technologies and frameworks.</li>
+                </ul>
+              </>
+            )
+        },
+        {
+          badges: ["Kotlin", "Angular"],
+          title: "Software Engineer Intern",
+          start: "2025",
+          end: "2025",
+          description: (
+            <>
+              Design, development and testing of applications and internal tools for the company.
+              <ul className="list-inside list-disc">
+                <li>Development of a project to improve the visibility of developers&apos; skills.</li>
+              </ul>     
+            </>
+          )
+        }
+      ]
     },
     {
       company: "Universidad de Trabajo del Uruguay",
       link: "https://utu.edu.uy",
-      badges: ["Linux", "Windows"],
-      title: "Lab assistant",
-      start: "2020",
-      end: "2025",
-      description: (
-        <>
-          Development of management systems, maintenance of network infrastructure and servers, technical support to teachers and students.
-          <ul className="list-inside list-disc">
-            <li>Maintained network infrastructure and servers.</li>
-            <li>Developed management systems for the school.</li>
-            <li>Provided technical support to teachers and students.</li>
-          </ul>
-        </>
-      ),
+      positions: [
+        {
+          badges: ["Linux", "Windows"],
+          title: "Lab assistant",
+          start: "2020",
+          end: "2025",
+          description: (
+            <>
+              Development of management systems, maintenance of network infrastructure and servers, technical support to teachers and students.
+              <ul className="list-inside list-disc">
+                <li>Maintained network infrastructure and servers.</li>
+                <li>Developed management systems for the school.</li>
+                <li>Provided technical support to teachers and students.</li>
+              </ul>
+            </>
+          ),
+        }
+      ]
     },
   ],
   skills: [
