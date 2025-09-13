@@ -7,13 +7,13 @@ export const RESUME_DATA = {
   locationLink: "https://www.google.com/maps/place/Montevideo,+Uruguay",
   avatarUrl: "https://avatars.githubusercontent.com/u/26977363?v=4",
   about:
-    "Developer dedicated to creating seamless, high-quality digital experiences.",
+    "Software Engineer | Backend & AI/ML Development.",
   summary: (
     <>
-      Full Stack SWE proficient in .NET, Kotlin, and Node.js, specializing in developing innovative web applications with integrated AI capabilities.
+      Software Engineer specializing in Artificial Intelligence and Machine Learning, with focus on backend development.
     </>
   ),
-  personalWebsiteUrl: "https://santiagopintos.github.io/",
+  personalWebsiteUrl: "https://spintos.dev/",
   contact: {
     email: "spintos@outlook.es",
     tel : null,
