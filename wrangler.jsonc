@@ -8,5 +8,9 @@
   "assets": {
     "directory": ".open-next/assets",
     "binding": "ASSETS"
+  },
+  "route": {
+    "pattern": "spintos.dev/cv",
+    "zone_name": "spintos.dev"
   }
 }
