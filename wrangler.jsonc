@@ -10,7 +10,7 @@
     "binding": "ASSETS"
   },
   "route": {
-    "pattern": "spintos.dev/cv",
+    "pattern": "spintos.dev/cv*",
     "zone_name": "spintos.dev"
   }
 }
